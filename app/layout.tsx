@@ -3,8 +3,8 @@ import type { Metadata, Viewport } from 'next'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'FarmScope · Analisis Workbook Peternakan Babi',
-  description: 'Dashboard penjualan, populasi, harga, prediksi, dan audit kualitas data dari workbook FarmScope.',
+  title: 'FarmScope · Dashboard Data Peternakan Realtime',
+  description: 'Kelola peternakan dan transaksi, impor CSV atau Excel, serta pantau analisis data secara realtime dengan Supabase.',
   generator: 'v0.app',
   icons: {
     icon: [
