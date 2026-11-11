@@ -1,5 +1,5 @@
-import { PigDashboard } from '@/components/pig-dashboard'
+import { FarmScopeDashboard } from '@/components/farmscope-dashboard'
 
 export default function Page() {
-  return <PigDashboard />
+  return <FarmScopeDashboard />
 }
