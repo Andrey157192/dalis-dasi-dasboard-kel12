@@ -161,3 +161,105 @@
     @apply bg-background text-foreground;
   }
 }
+
+.farmscope-shell aside {
+  box-shadow: 8px 0 28px rgb(15 23 42 / 3%);
+}
+
+.dashboard-header {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  background-color: #f7fbfa;
+  background-image: radial-gradient(ellipse at 78% 125%, rgb(20 184 166 / 17%), transparent 35%), radial-gradient(ellipse at 92% 115%, rgb(13 148 136 / 14%), transparent 27%), linear-gradient(110deg, #ffffff 0%, #f5fbfa 58%, #e9f6f3 100%);
+}
+
+.dashboard-header::after {
+  position: absolute;
+  z-index: -1;
+  right: 3%;
+  bottom: -54px;
+  width: min(42vw, 520px);
+  height: 130px;
+  border-radius: 50% 50% 0 0;
+  background: linear-gradient(180deg, rgb(13 148 136 / 14%), rgb(15 118 110 / 4%));
+  content: "";
+  transform: rotate(-4deg);
+}
+
+.dashboard-overview {
+  --card: #17212e;
+  --card-foreground: #f3f7fb;
+  --border: rgb(148 163 184 / 16%);
+  --muted-foreground: #aeb9c8;
+  border-radius: 1.5rem;
+  background: #101722;
+  color: #f3f7fb;
+}
+
+.dashboard-overview > section:first-of-type [data-slot="card"]:nth-child(odd) {
+  background: linear-gradient(145deg, #0f766e, #0b3f45);
+}
+
+.dashboard-overview > section:first-of-type [data-slot="card"]:nth-child(even) {
+  background: linear-gradient(145deg, #d5f4ef, #b8e7e0);
+  color: #102a31;
+}
+
+.dashboard-overview > section:first-of-type [data-slot="card"]:nth-child(even) [class*="text-slate-500"],
+.dashboard-overview > section:first-of-type [data-slot="card"]:nth-child(even) [class*="text-slate-400"] {
+  color: #47666b !important;
+}
+
+.dashboard-overview [data-slot="card"] {
+  overflow: hidden;
+  border-color: rgb(148 163 184 / 16%);
+  background: linear-gradient(145deg, #1b2635, #151e2b 75%);
+  color: #f3f7fb;
+  box-shadow: 0 12px 30px rgb(2 8 23 / 14%);
+}
+
+.dashboard-overview [data-slot="card"] [class*="text-slate-500"],
+.dashboard-overview [data-slot="card"] [class*="text-slate-400"],
+.dashboard-overview [data-slot="card"] [class*="text-slate-600"] {
+  color: #aeb9c8 !important;
+}
+
+.dashboard-overview [data-slot="card"] [class*="text-slate-900"],
+.dashboard-overview [data-slot="card"] [class*="text-slate-800"] {
+  color: #f3f7fb !important;
+}
+
+.dashboard-overview [data-slot="card"] [class*="bg-slate-50"] {
+  background-color: rgb(148 163 184 / 12%) !important;
+}
+
+.dashboard-overview [data-slot="card"] [class*="bg-teal-50"] {
+  background-color: rgb(45 212 191 / 14%) !important;
+  color: #5eead4 !important;
+}
+
+.dashboard-overview [data-slot="card"] [class*="border-slate-200"] {
+  border-color: rgb(148 163 184 / 18%) !important;
+}
+
+.dashboard-overview .recharts-cartesian-grid line {
+  stroke: rgb(148 163 184 / 18%);
+}
+
+.dashboard-overview .recharts-cartesian-axis-tick text {
+  fill: #aeb9c8;
+}
+
+.dashboard-overview .recharts-cartesian-axis-line,
+.dashboard-overview .recharts-cartesian-axis-tick line {
+  stroke: rgb(148 163 184 / 25%);
+}
+
+@media (max-width: 640px) {
+  .dashboard-overview {
+    margin: -0.75rem;
+    padding: 0.75rem;
+    border-radius: 1.25rem;
+  }
+}
