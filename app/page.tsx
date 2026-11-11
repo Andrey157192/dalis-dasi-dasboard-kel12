@@ -1,5 +1,5 @@
-import { FarmScopeDashboard } from '@/components/farmscope-dashboard'
+import { FarmScopeWorkbookDashboard } from '@/components/farmscope-workbook-dashboard'
 
 export default function Page() {
-  return <FarmScopeDashboard />
+  return <FarmScopeWorkbookDashboard />
 }
